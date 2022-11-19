@@ -8,7 +8,7 @@
 }
 html{
     /*62.5% of html element thatis 62.5 % * 16px==10px*/
-    font-size: 62.5; 
+    font-size: 62.5%; 
 }
 body{
     font-family: Inter,Arial, Helvetica, sans-serif;
@@ -63,15 +63,41 @@ a{
 .link-arrow::after{
     content: '-->';
     margin-left: 5px;
-    transition: margin 0.15s;
+    transition: 0.15s;
+    transition-timing-function:ease-in-out;
 }
 .link-arrow:hover::after{
     margin-left: 10px;
 }
-@media screen and (min-width:1024){
+@media screen and (min-width:1024px){
     .link-arrow{
         font-size: 1.5rem;
     }
 }
-/*/badges*
-badge
+/*/badges*/
+.badge{
+    border-radius: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    white-space: nowrap;
+}
+.badge--primary{
+  background: var(--color-primary);
+  color: #ffff;
+}
+.badge--secondary{
+    background: var(--color-secondary);
+    color: #fff;
+}
+.badge--small{
+    font-size: 1.6rem;
+}
+@media screen and (min-width:1024px){
+    .badge {
+        font-size: 1.5rem;
+    }
+    .badge--small{
+        font-size: 1.2rem;
+    }
+} 
